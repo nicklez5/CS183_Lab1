@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+#Rsyslog forwards log message in an IP network. Handling offline outputs. 
+#Since i am the admin of this , i dont think its as important as other services and besides i dont pay much attention on firefox error reports. Either would i with log messages.
+systemctl stop rsyslog 
+
+#Postfix is the act of routing and delivering electronic mail
+#There is no mail program or mail service required in this simple bash script and the system can survive without having the option of delivering mail which i think this was a good service to get rid of
+systemctl stop postfix
+
+systemctl list-units --type service --state running
+
